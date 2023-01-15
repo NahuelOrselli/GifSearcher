@@ -1,0 +1,14 @@
+:root{
+    --max-width: 250px;
+}
+
+.Gif{
+    display: block;
+    border: 2px cyan solid;
+    margin: 10px;
+    width: 300px;
+}
+
+.Gif-image{
+    max-width: var(--max-width);
+}
