@@ -19,7 +19,7 @@ function App () {
             component={Home}
           />
           <Route
-            path='/search/:keyword'
+            path='/search/:keyword/:rating?'
             component={SearchResults}
           />
           <Route

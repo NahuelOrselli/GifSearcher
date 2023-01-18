@@ -25,7 +25,7 @@ export default function Detail ({ params }) {
   return (
     <>
       <Helmet>
-        <title>{title}</title>
+        <title>{decodeURI(title)}</title>
         <meta
           name='description'
           content={`Detalle del gif: ${title}`}
