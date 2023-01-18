@@ -1,6 +1,6 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 import { Helmet } from 'react-helmet'
-import { Link, useLocation } from 'wouter'
+import { Link } from 'wouter'
 import ListOfGifs from '../../components/ListOfGifs/ListOfGifs'
 import SearchForm from '../../components/SearchForm'
 import TrendingSearches from '../../components/TrendingSearches'
@@ -9,12 +9,7 @@ import { useGifs } from '../../hooks/useGifs'
 const POPULAR_GIFS = ['Argentina', 'Digimon', 'Pokemon']
 
 export default function Home () {
-  const [path, pushLocation] = useLocation()
   const { loading, gifs } = useGifs()
-
-  const handleSubmit = useCallback(({ keyword }) => {
-    pushLocation(`/search/${keyword}`)
-  }, [pushLocation])
 
   return (
     <>
@@ -26,7 +21,7 @@ export default function Home () {
         />
       </Helmet>
       <h3>Buscador</h3>
-      <SearchForm onSubmit={handleSubmit} />
+      <SearchForm />
       <h3>Ultima Busqueda</h3>
       <ListOfGifs gifs={gifs} />
       <h3>Los gifs mas populares</h3>

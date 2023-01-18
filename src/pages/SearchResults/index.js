@@ -5,10 +5,11 @@ import { useGifs } from '../../hooks/useGifs'
 import useNearScreen from '../../hooks/useNearScreen'
 import debounce from 'just-debounce-it'
 import { Helmet } from 'react-helmet'
+import SearchForm from '../../components/SearchForm'
 
 export default function SearchResults ({ params }) {
-  const { keyword } = params
-  const { loading, gifs, setPage } = useGifs({ keyword })
+  const { keyword, rating = 'g' } = params
+  const { loading, gifs, setPage } = useGifs({ keyword, rating })
   const externalRef = useRef()
   const { isNearScreen } = useNearScreen({
     externalRef: loading ? null : externalRef,
@@ -33,9 +34,11 @@ export default function SearchResults ({ params }) {
         : (
           <>
             <Helmet>
-              <title>{title}</title>
+              <title>{decodeURI(title)}</title>
               <meta name='description' content={title} />
             </Helmet>
+            <h3>Buscador</h3>
+            <SearchForm initalKeyword={keyword} initalRating={rating} />
             <h3 className='App-tittle'>
               {decodeURI(keyword)}
             </h3>
