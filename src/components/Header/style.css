@@ -1,0 +1,10 @@
+.gf-header {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.gf-header a {
+    color: whitesmoke;
+    font-size: 16px;
+    font-weight: 600;
+}
