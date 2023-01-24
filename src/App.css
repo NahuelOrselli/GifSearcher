@@ -15,6 +15,14 @@
   border: 3px blue solid;
 }
 
+.btn {
+  background: mediumslateblue;
+  border: solid 1px whitesmoke;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 16px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

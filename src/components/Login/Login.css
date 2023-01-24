@@ -1,0 +1,32 @@
+.form{
+    max-width: 320px;
+    width: 100%;
+}
+
+.form label{
+    display: block;
+    font-size: 14px;
+    text-align: left;
+}
+
+.form input{
+    background: #fff;
+    border: none;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: block;
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 16px;
+    margin-top: 4px;
+    padding: 2px 10px;
+    width: 100%;
+}
+
+.form .btn{
+    width: 100%;
+}
+
+.form button:hover {
+    background: rgba(124, 104, 238, 0.553);
+}
