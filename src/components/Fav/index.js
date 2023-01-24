@@ -1,18 +1,23 @@
-import React from 'react'
-import { useLocation } from 'wouter'
+import React, { useState } from 'react'
 import useUser from '../../hooks/useUser'
+import Login from '../Login'
+import Modal from '../Modal'
 import './styles.css'
 
 export default function Fav ({ id }) {
   const { isLogged, addFavUser, favs } = useUser()
-  const [, navigate] = useLocation()
+  const [showModal, setShowModal] = useState(false)
 
   const isFaved = favs.some(favId => favId === id)
 
   const handleClick = () => {
-    if (!isLogged) navigate('/login')
-    !isFaved && addFavUser({ id })
+    if (!isLogged) setShowModal(true)
+    if (!isFaved && isLogged) addFavUser({ id })
   }
+
+  const handleClose = () => setShowModal(false)
+
+  const handleLogin = () => setShowModal(false)
 
   const [
     label,
@@ -34,6 +39,7 @@ export default function Fav ({ id }) {
           {emoji}
         </span>
       </button>
+      {showModal && <Modal onClose={handleClose}><Login onLogin={handleLogin} /></Modal>}
     </>
   )
 }

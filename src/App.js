@@ -2,7 +2,7 @@ import React, { Suspense } from 'react'
 import { Route, Link } from 'wouter'
 
 import Detail from './pages/Detail/index'
-import Login from './pages/Login'
+import LoginPage from './pages/Login'
 import SearchResults from './pages/SearchResults/index'
 
 import Header from './components/Header'
@@ -39,7 +39,7 @@ function App () {
               />
               <Route
                 path='/login'
-                component={Login}
+                component={LoginPage}
               />
               <Route
                 path='/404'

@@ -1,0 +1,19 @@
+.search-form input {
+    background: whitesmoke;
+    border: solid 3px mediumslateblue;
+    border-radius: 0px;
+    padding: 8px;
+}
+
+.search-form select {
+    background: whitesmoke;
+    border: solid 3px mediumslateblue;
+    border-radius: 0px;
+    padding: 7px;
+}
+
+.search-form .btn {
+    border: solid 3px mediumslateblue;
+    border-radius: 0px;
+    padding: 8px;
+}
