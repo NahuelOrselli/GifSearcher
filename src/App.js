@@ -3,6 +3,7 @@ import { Route, Link } from 'wouter'
 
 import Detail from './pages/Detail/index'
 import LoginPage from './pages/Login'
+import RegisterPage from './pages/Register'
 import SearchResults from './pages/SearchResults/index'
 
 import Header from './components/Header'
@@ -40,6 +41,10 @@ function App () {
               <Route
                 path='/login'
                 component={LoginPage}
+              />
+              <Route
+                path='/register'
+                component={RegisterPage}
               />
               <Route
                 path='/404'

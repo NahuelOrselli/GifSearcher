@@ -23,6 +23,16 @@
     width: 100%;
 }
 
+.form input.error {
+    border: 1px solid red;
+}
+
+.form-error{
+    color: red;
+    font-size: 12px;
+    display: block;
+}
+
 .form .btn{
     width: 100%;
 }
