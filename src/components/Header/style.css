@@ -5,6 +5,14 @@
 
 .gf-header a {
     color: whitesmoke;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
+    padding: 10px;
+    margin: 4px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.gf-header a:hover {
+    color: mediumslateblue;
 }

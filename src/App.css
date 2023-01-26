@@ -23,6 +23,11 @@
   padding: 16px;
 }
 
+.btn[disabled] {
+  opacity: .3;
+  pointer-events: none;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
