@@ -1,3 +1,10 @@
+.centerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .form{
     max-width: 320px;
     width: 100%;

@@ -8,7 +8,7 @@ export default function Register () {
 
   if (isRegistered) return <RedirectReg />
   return (
-    <>
+    <div className='centerForm'>
       <Formik
         initialValues={{ username: '', name: '', password: '' }}
         validate={values => {
@@ -38,35 +38,41 @@ export default function Register () {
       >
         {({ errors, isSubmitting }) => (
           <Form className='form' autoComplete='off'>
-            <Field
-              className={errors.username ? 'error' : ''}
-              placeholder='Enter Username'
-              type='username'
-              name='username'
-              autoComplete='false'
-            />
+            <label>Username:
+              <Field
+                className={errors.username ? 'error' : ''}
+                placeholder='Enter Username'
+                type='username'
+                name='username'
+                autoComplete='false'
+              />
+            </label>
             <ErrorMessage
               className='form-error'
               name='username'
               component='small'
             />
-            <Field
-              className={errors.name ? 'error' : ''}
-              placeholder='Enter Name'
-              type='name' name='name'
-              autoComplete='false'
-            />
+            <label>Name:
+              <Field
+                className={errors.name ? 'error' : ''}
+                placeholder='Enter Name'
+                type='name' name='name'
+                autoComplete='false'
+              />
+            </label>
             <ErrorMessage
               className='form-error'
               name='name'
               component='small'
             />
-            <Field
-              className={errors.password ? 'error' : ''}
-              placeholder='Enter Password'
-              type='password' name='password'
-              autoComplete='false'
-            />
+            <label>Password:
+              <Field
+                className={errors.password ? 'error' : ''}
+                placeholder='Enter Password'
+                type='password' name='password'
+                autoComplete='false'
+              />
+            </label>
             <ErrorMessage
               className='form-error'
               name='password'
@@ -78,6 +84,6 @@ export default function Register () {
           </Form>
         )}
       </Formik>
-    </>
+    </div>
   )
 }
