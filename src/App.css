@@ -11,12 +11,72 @@
 }
 
 .App-content{
-  width: 90%;
-  border: 3px blue solid;
+  background-color: var(--theme-body-bg);
+  color: var(--theme-body-txt);
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  padding: 16px;
+  text-align: left;
+}
+
+.App-title {
+  color: var(--theme-body-txt);
+  margin-top: 0.6rem;
+}
+
+.App-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.App-wrapper {
+	width: 100%;
+	max-width: 90rem;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.App-results {
+  flex-shrink: 2;
+  width: 100%;
+}
+
+.App-category {
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+@media screen and (min-width: 55rem){
+  .App-main{
+    flex-direction: initial;
+  }
+
+  .App-category{
+    position: sticky;
+    top: var(--search-size-mx-h);
+    width: 40%;
+    max-width: 300px;
+  }
+}
+
+.App-logo {
+  cursor: pointer;
+  margin: 10px auto;
+  padding: 20px 0;
+  width: 244px;
+}
+
+.App-logo img {
+  object-fit: cover;
+  filter: drop-shadow(1px 1px rgba(155, 138, 254, 0.971));
+  width: 100%;
 }
 
 .btn {
-  background: mediumslateblue;
+  background: rgb(123, 104, 238);
   border: solid 1px whitesmoke;
   border-radius: 6px;
   cursor: pointer;
@@ -26,10 +86,4 @@
 .btn[disabled] {
   opacity: .3;
   pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }

@@ -17,10 +17,10 @@ function RedirectReg () {
   }, [time, navigate])
   return (
     <>
-      <div className='redirect'>
-        <h4>Great!</h4>
-        <h5>You've been successfully registered!</h5>
-        <h6>You'll be redirect in {time} {time > 1 ? 'seconds' : 'second'} to Home, please Login</h6>
+      <div className='Redirect-wrapper'>
+        <h4 className='App-title'>Great!</h4>
+        <h5 className='App-title'>You've been successfully registered!</h5>
+        <h6 className='App-title'>You'll be redirect in {time} {time > 1 ? 'seconds' : 'second'} to Home, please Login</h6>
       </div>
     </>
   )

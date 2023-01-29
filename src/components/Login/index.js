@@ -6,7 +6,7 @@ import './Login.css'
 export default function Login ({ onLogin }) {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const [path, navigate] = useLocation()
+  const [, navigate] = useLocation()
   const { login, isLogged, isLoginLoading, hasLoginError } = useUser()
 
   useEffect(() => {
@@ -14,7 +14,7 @@ export default function Login ({ onLogin }) {
       navigate('/')
       onLogin && onLogin()
     }
-  }, [isLogged, navigate])
+  }, [isLogged, navigate, onLogin])
 
   const handleSubmit = (evt) => {
     evt.preventDefault()

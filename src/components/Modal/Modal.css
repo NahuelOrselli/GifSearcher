@@ -6,10 +6,11 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 100;
 }
 
 .modal-content {
-    background: #303030;
+    background: #111;
     width: 300px;
     padding: 10px 20px;
     height: 80vh;

@@ -10,12 +10,9 @@ function Gif ({ title, id, url }) {
         <div className='Gif-buttons'>
           <Fav id={id} />
         </div>
-        <Link to={`/gif/${id}`}>
-          <picture className='Gif-Pic' key={id}>
-            <h3 className='Gif-title'>{title}</h3>
-            <h5 className='Gif-title-id'>{id}</h5>
-            <img className='Gif-image' alt='no' src={url} />
-          </picture>
+        <Link to={`/gif/${id}`} className='Gif-link'>
+          <h4>{title}</h4>
+          <img loading='lazy' alt={title} src={url} />
         </Link>
       </div>
     </>

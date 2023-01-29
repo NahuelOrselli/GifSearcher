@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 import { Route, Link } from 'wouter'
 
 import Detail from './pages/Detail/index'
+import ErrorPage from './pages/ErrorPage'
 import LoginPage from './pages/Login'
 import RegisterPage from './pages/Register'
 import SearchResults from './pages/SearchResults/index'
@@ -12,6 +13,7 @@ import { GifsContextProvider } from './context/GifContext'
 import { UserContextProvider } from './context/userContext'
 
 import './App.css'
+import Logo from './logo.png'
 
 const HomePage = React.lazy(() => import('./pages/Home'))
 
@@ -23,7 +25,9 @@ function App () {
           <section className='App-content'>
             <Header />
             <Link to='/'>
-              Api Gifs
+              <figure className='App-logo'>
+                <img alt='logo' src={Logo} />
+              </figure>
             </Link>
             <GifsContextProvider>
               <Route
@@ -48,7 +52,7 @@ function App () {
               />
               <Route
                 path='/404'
-                component={() => <h1>Error 404 :( </h1>}
+                component={ErrorPage}
               />
             </GifsContextProvider>
           </section>

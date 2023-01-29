@@ -37,13 +37,16 @@ export default function SearchResults ({ params }) {
               <title>{decodeURI(title)}</title>
               <meta name='description' content={title} />
             </Helmet>
-            <h3>Buscador</h3>
-            <SearchForm initalKeyword={keyword} initalRating={rating} />
-            <h3 className='App-tittle'>
-              {decodeURI(keyword)}
-            </h3>
-            <ListOfGifs gifs={gifs} />
-            <div ref={externalRef} />
+            <header className='o-header'>
+              <SearchForm initialKeyword={keyword} initialRating={rating} />
+            </header>
+            <div className='App-wrapper'>
+              <h3 className='App-title'>
+                {decodeURI(keyword)}
+              </h3>
+              <ListOfGifs gifs={gifs} />
+              <div id='visor' ref={externalRef} />
+            </div>
           </>
           )
         }
