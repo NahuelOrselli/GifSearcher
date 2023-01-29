@@ -28,7 +28,7 @@ export default function Login ({ onLogin }) {
   }
 
   return (
-    <>
+    <div className='centerForm'>
       {isLoginLoading && <strong>Checking credentials...</strong>}
       {!isLoginLoading &&
         <form className='form' onSubmit={handleSubmit}>
@@ -53,6 +53,6 @@ export default function Login ({ onLogin }) {
       {
           hasLoginError && <strong>Credentials are invalid</strong>
       }
-    </>
+    </div>
   )
 }
